@@ -188,6 +188,7 @@ private:
 
 		this->pub->publish(this->jointState);
 		this->broadcaster->sendTransform(this->odomTrans);
+		RCLCPP_INFO(this->get_logger(), "Sending TF");
   }
 
 	std::shared_ptr<tf2_ros::TransformBroadcaster> broadcaster;

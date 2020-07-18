@@ -47,6 +47,8 @@ install(TARGETS
   swiftpro_read_node
   DESTINATION lib/${PROJECT_NAME})
 
+install(DIRECTORY launch DESTINATION ${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME})
+
 rosidl_target_interfaces(swiftpro_write_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
