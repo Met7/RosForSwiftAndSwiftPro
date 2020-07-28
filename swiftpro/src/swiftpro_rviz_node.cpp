@@ -46,7 +46,7 @@ public:
             "SwiftproState_topic",
             1,
             std::bind(&SwiftproRvizNode::swiftproStateCallback, this, std::placeholders::_1)))
-    , pub(this->create_publisher<sensor_msgs::msg::JointState>("jointStates", 1))
+    , pub(this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 1))
     , timer(this->create_wall_timer(std::chrono::milliseconds(50),
                                     std::bind(&SwiftproRvizNode::timerCallback,
                                     this)))
