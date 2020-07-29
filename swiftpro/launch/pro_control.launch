@@ -1,9 +1,0 @@
-<launch>
-	<node name="swiftpro_write_node" pkg="swiftpro" exec="swiftpro_write_node"/>
-	<node name="swiftpro_moveit_node" pkg="swiftpro" exec="swiftpro_moveit_node"/>
-	<node name="swiftpro_rviz_node" pkg="swiftpro" exec="swiftpro_rviz_node" />
-	
-	<node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher">
-		<param name="robot_description" command="cat $(find swiftpro)/urdf/pro_model.xacro" />
-	</node>
-</launch>
